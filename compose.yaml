@@ -23,7 +23,7 @@ services:
     networks:
       - database
     ports:
-      - "3001:3000"
+      - "${BACKEND_PORT:?err}:3000"
   
   frontend:
     build:
@@ -33,7 +33,7 @@ services:
       NEXT_PUBLIC_GOOGLE_CLIENT_ID: $NEXT_PUBLIC_GOOGLE_CLIENT_ID
       NEXT_PUBLIC_GOOGLE_API_KEY: $NEXT_PUBLIC_GOOGLE_API_KEY
     ports:
-      - "3000:3000"
+      - "${FRONTEND_PORT:?err}:3000"
 
 volumes:
   db_data:
