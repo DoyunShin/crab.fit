@@ -28,7 +28,7 @@ const Page = async () => {
       <CreateForm />
     </Content>
 
-    <Section id="about">
+    {/* <Section id="about">
       <Content>
         <h2>{t('about.name')}</h2>
 
@@ -47,7 +47,7 @@ const Page = async () => {
         <P>{t('about.content.p6')}</P>
         <P>{t('about.content.p5')}</P>
       </Content>
-    </Section>
+    </Section> */}
 
     <Footer />
   </>
